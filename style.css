@@ -12,7 +12,7 @@ body{
 }
 
 .cabecalho h3{
-    color: rgb(206, 206, 8);
+    color: rgb(7, 54, 25);
 }
 
 p .alinha{
@@ -39,4 +39,7 @@ p .alinha{
     color: white;
     text-align: center;
     padding: 5px;
+}
+.bg-emelly{
+    background-color: rgb(59, 105, 78);
 }
