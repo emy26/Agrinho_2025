@@ -24,3 +24,110 @@ body{
 .bg-emelly{
     background-color: rgb(59, 105, 78);
 }
+/* Cartões que viram */
+.flip-card-section {
+    background-color: #d4ffdc;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 80px 40px;
+  }
+  
+  .flip-card {
+    background: transparent;
+    width: 280px;
+    height: 360px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  
+  .flip-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card.flipped .flip-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-front, .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    overflow: hidden;
+  }
+  
+  .flip-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .flip-back {
+    background-color: #e5ffea;
+    color: #333;
+    padding: 20px;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  /* Blocos de conteúdo com imagem */
+  .content-block {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 80px 40px;
+    background-color: #d4ffdc;
+    flex-wrap: wrap;
+  }
+  
+  .content-block.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .content-block img {
+    width: 400px;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  
+  .content-block .text {
+    max-width: 600px;
+  }
+  
+  /* Galeria */
+  .gallery {
+    padding: 80px 40px;
+    text-align: center;
+    background-color: #b3d4b9;
+  }
+  
+  .gallery h2 {
+    margin-bottom: 40px;
+    font-size: 28px;
+  }
+  
+  .gallery-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .gallery-grid img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }

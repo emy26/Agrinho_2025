@@ -23,3 +23,81 @@ body{
 .bg-emelly{
     background-color: rgb(59, 105, 78);
 }
+/* Espaço geral entre seções */
+section {
+    padding: 80px 40px;
+  }
+  
+  /* Imagem com texto ao lado */
+  .image-text {
+    background-color:  #d4ffdc;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+  
+  .image-text img {
+    width: 550px;
+    height: auto;
+    border-radius: 12px;
+  }
+  
+  .text-content {
+    max-width: 600px;
+    padding: 20px;
+  }
+  
+  /* Duas imagens centralizadas */
+  .two-images {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .two-images img {
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
+  }
+  
+  /* Cartões */
+  .card-section {
+    background-color: #d4ffdc;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .card {
+    background-color: #e5ffea;
+    padding: 30px;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-8px);
+  }
+  
+  .card h3 {
+    margin-bottom: 12px;
+  }
+  
+  /* Seção de conteúdo grande */
+  .large-content {
+    background-color: #d4ffdc;
+    max-width: 3000px;
+    margin: 0 auto;
+    font-size: 18px;
+  }
+  
+  .large-content h2 {
+    background-color: #d4ffdc;
+    margin-bottom: 20px;
+    font-size: 32px;
+  }

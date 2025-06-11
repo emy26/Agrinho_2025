@@ -27,7 +27,7 @@
                         <a class="nav-link active text-white" aria-current="page" href="index.html">Página Inicial |</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="energia.html">Energia Rural |</a>
+                        <a class="nav-link text-white" href="energia.html">Máquinas e tecnologia |</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="agua.html">Acessibilidade a Água |</a>
@@ -39,6 +39,73 @@
             </div>
         </div>
     </nav>
+
+     <!-- Carrossel / Slide -->
+  <div class="carousel">
+    <div class="slide active">
+      <img src="./assets/image/colheitadeira2.jpg" alt="Slide 1">
+    </div>
+    <div class="slide">
+      <img src="./assets/image/maquinas.jpg" alt="Slide 2">
+    </div>
+    <div class="slide">
+      <img src="./assets/image/trator.jpg" alt="Slide 3">
+    </div>
+    <div class="carousel-buttons">
+      <button onclick="changeSlide(-1)">❮</button>
+      <button onclick="changeSlide(1)">❯</button>
+    </div>
+  </div>
+
+  <!-- Texto com imagem à direita -->
+  <section class="text-image-right">
+    <div class="text-block">
+      <h2>Maquinários e produção</h2>
+      <p>O uso de maquinários no campo revolucionou a agricultura, aumentando a eficiência e a produtividade. Equipamentos como tratores, colheitadeiras, plantadeiras e pulverizadores automatizados ajudam a realizar tarefas de preparo do solo, plantio, colheita e aplicação de defensivos de maneira mais rápida e precisa. Isso reduz o tempo de trabalho e o custo com mão de obra, além de melhorar a qualidade e a quantidade da produção agrícola. O avanço tecnológico também tem permitido a implementação de máquinas mais sustentáveis e eficientes no uso de recursos, como água e combustível.</p>
+    </div>
+    <img src="./assets/image/colheitadeira.jpg" alt="Equipe trabalhando">
+  </section>
+
+  <!-- Cards com ícones -->
+  <section class="icon-cards">
+    <div class="card">
+      <h3>Colheitadeiras</h3>
+      <p>A colheitadeira corta e separa os grãos das plantas, tornando a colheita mais rápida e eficiente.</p>
+    </div>
+    <div class="card">
+      <h3>Pulverizadores</h3>
+      <p>O pulverizador aplica defensivos e fertilizantes nas plantas, garantindo proteção e crescimento eficiente.</p>
+    </div>
+    <div class="card">
+      <h3>Drones</h3>
+      <p>Drones no campo monitoram as plantações e aplicam insumos, otimizando a produção agrícola.</p>
+    </div>
+  </section>
+
+
+  <!-- Script para slide -->
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        if (i === index) slide.classList.add("active");
+      });
+    }
+
+    function changeSlide(direction) {
+      currentSlide = (currentSlide + direction + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    // Troca automática a cada 5s
+    setInterval(() => changeSlide(1), 5000);
+  </script>
+</body>
+</html>
+
     <div class="footer ">
         <p>Todos os direitos reservados para agrinho 2025 - Festejando a conexão campo cidade.</p>
     </div>
